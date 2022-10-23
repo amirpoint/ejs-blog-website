@@ -1,7 +1,10 @@
+
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
 }
+
+/* HEADER */
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -9,16 +12,20 @@
     border-radius: 0;
     margin-bottom: 0;
     font-size: 12px;
-    letter-spacing: 5px;
-}
-.navbar-brand {
-    color: #d25e47 !important;
-    font-size: 2.5rem;
-}
-.navbar-nav  li a:hover {
-    color: #d4624b !important;
+    letter-spacing: 4px;
 }
 
+.navbar-brand {
+    color: #7c4fcf !important;
+    font-size: 2.5rem;
+    float: none;
+}
+
+.navbar-nav  li a:hover {
+    color: #7c4fcf !important;
+}
+
+/* FOOTER */
 .footer-padding {
 	padding-bottom: 60px;
 }
@@ -29,11 +36,37 @@
 	bottom: 0;
 	width: 100%;
 	height: 60px;
-	background-color: #cd5740;
+	background-color: #a58cd4;
 }
 
 .footer p {
 	margin-top: 25px;
 	font-size: 12px;
-  color: #fff;
+    color: #fff;
+}
+
+/* COMPOSE PAGE */
+input[name = postTitle] {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+.btn-primary {
+    background-color: #7c4fcf;
+    border-color: #7c4fcf;
+}
+
+.btn-primary:hover {
+    background-color: #7149bd;
+    border-color: #7149bd;
+}
+
+/* NOT FOUND PAGE */
+.not-found {
+    text-align: center;
+}
+
+.not-found h1 {
+    font-size: 70px;
 }
