@@ -38,6 +38,21 @@ app.get("/compose", function (req, res) {
 
 });
 
+app.get("/posts/:postName", function (req, res) {
+  //compare requested and restored titles
+  
+  postsContainer.forEach(function (post) {
+    if (_.kebabCase(post.title) === req.params.postName) {
+      res.render("post", {postTitle: post.title, postContent: post.content});
+
+    } else {
+      res.render("not-found", {});
+
+    };
+  });
+
+});
+
 app.post("/compose", function (req, res) {
   const post = {
     title: req.body.postTitle,
