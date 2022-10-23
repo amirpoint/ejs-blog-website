@@ -13,7 +13,6 @@ const app = express();
 const port = "8080";
 
 app.set("view engine", "ejs");
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
@@ -40,9 +39,8 @@ app.get("/compose", function (req, res) {
 
 app.get("/posts/:postName", function (req, res) {
   //compare requested and restored titles
-  
   postsContainer.forEach(function (post) {
-    if (_.kebabCase(post.title) === req.params.postName) {
+    if ((_.kebabCase(post.title) === req.params.postName) || (post.title === req.params.postName)) {
       res.render("post", {postTitle: post.title, postContent: post.content});
 
     } else {
@@ -59,7 +57,7 @@ app.post("/compose", function (req, res) {
     content: req.body.postBody
   };
   postsContainer.push(post);
-  console.log(post);
+  console.log(`Successfully posted..! Title: ${post.title}`);
   res.redirect("/");
 
 });
