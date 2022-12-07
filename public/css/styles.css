@@ -21,6 +21,10 @@
     float: none;
 }
 
+.navbar-brand:hover {
+    color: #9d79df !important;
+}
+
 .navbar-nav  li a:hover {
     color: #7c4fcf !important;
 }
