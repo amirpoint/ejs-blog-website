@@ -66,6 +66,11 @@ input[name = postTitle] {
     border-color: #7149bd;
 }
 
+/* POST PAGE */
+.post-content {
+    word-break: break-all;
+}
+
 /* NOT FOUND PAGE */
 .not-found {
     text-align: center;
