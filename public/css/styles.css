@@ -21,6 +21,10 @@
     float: none;
 }
 
+.navbar-brand:hover {
+    color: #9d79df !important;
+}
+
 .navbar-nav  li a:hover {
     color: #7c4fcf !important;
 }
@@ -60,6 +64,11 @@ input[name = postTitle] {
 .btn-primary:hover {
     background-color: #7149bd;
     border-color: #7149bd;
+}
+
+/* POST PAGE */
+.post-content {
+    word-break: break-all;
 }
 
 /* NOT FOUND PAGE */
